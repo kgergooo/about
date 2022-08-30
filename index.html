@@ -1,86 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Compound Interest Calculator - Support</title>
-
-    <base href="/" />
-
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-
-    <!-- add to homescreen for ios -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css"
-      integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"
-      integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+    <title>GLab</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500&amp;subset=latin-ext" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="robots" content="noindex" />
   </head>
 
+  <style>
+    html {
+      font-size: 14px;
+    }
+
+    .container {
+      font-size: 14px;
+      color: #313131;
+      font-family: "Open Sans";
+    }
+    .card-custom {
+      overflow: hidden;
+      min-height: 450px;
+      box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    }
+
+    .card-custom-img {
+      height: 200px;
+      min-height: 200px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-color: inherit;
+    }
+
+    /* First border-left-width setting is a fallback */
+    .card-custom-img::after {
+      position: absolute;
+      content: "";
+      top: 161px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-top-width: 40px;
+      border-right-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 545px;
+      border-left-width: calc(575px - 5vw);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: inherit;
+    }
+
+    .card-custom-avatar img {
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+      position: absolute;
+      top: 100px;
+      left: 1.25rem;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+
   <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">FV - Calculator IOS application support</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                target="_blank"
-                href="https://apps.apple.com/us/app/future-value-calculator/id1642215165"
-                >AppStore</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                target="_blank"
-                href="https://play.google.com/store/apps/details?id=mind.compound.calculator"
-                >Google Play</a
-              >
-            </li>
-          </ul>
+    <div class="container">
+      <div class="pt-5 m-auto">
+        <div style="max-width: 500px; margin: 0 auto" class="pb-5">
+          <!-- Copy the content below until next comment -->
+          <div class="card card-custom bg-white border-white border-0">
+            <div class="card-custom-img" style="background-image: url(img/tri.jpg)"></div>
+            <div class="card-custom-avatar">
+              <img class="img-fluid" src="img/me.jpg" alt="Avatar" />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+              <h2 class="card-title">GLab.</h2>
+              <p class="card-text">
+                I'm a motivated Front End Developer adept at creating responsive web and hybrid mobile applications that meet
+                customer needs. Proficient in Ionic, Angular, TypeScript and JavaScript. I develope new ideas as a hobby.
+              </p>
+            </div>
+
+            <hr />
+            <div class="card-footer pt-3 mb-2" style="background: inherit; border-color: inherit">
+              <h2 class="card-title pb-2">My latest work</h2>
+              <h6 class="card-title">Compound Interest Calculator</h6>
+              <a href="https://play.google.com/store/apps/details?id=mind.compound.calculator" target="_blank"
+                ><img src="img/google.png" style="width: 100px"
+              /></a>
+              <a href="https://apps.apple.com/us/app/future-value-calculator/id1642215165" target="_blank"
+                ><img src="img/apple.png" style="width: 100px"
+              /></a>
+              <a href="https://twitter.com/fvCalculatorApp" target="_blank"><img src="img/twitter.png" style="width: 40px" /></a>
+            </div>
+          </div>
+          <!-- Copy until here -->
         </div>
       </div>
-    </nav>
-
-    <main class="container">
-      <div class="bg-light p-5 rounded">
-        <h1>FE - Calculator Application</h1>
-        <p class="lead">
-          Thanks for using our application. Estimate your long-term investment future value. You can use our application as a
-          sandbox to play with the numbers and see how much you can earn if you use the benefit of compounding.
-        </p>
-
-        <a class="btn btn-lg btn-primary" href="https://twitter.com/fvCalculatorApp" role="button">Twitter</a>
-      </div>
-    </main>
+    </div>
   </body>
 </html>
