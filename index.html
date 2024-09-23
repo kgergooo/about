@@ -1,15 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Sign In Redirect</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+    <title>GLab.</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500&amp;subset=latin-ext" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="robots" content="noindex" />
   </head>
+
+  <style>
+    html {
+      font-size: 14px;
+    }
+
+    .container {
+      font-size: 14px;
+      color: #313131;
+      font-family: "Open Sans";
+    }
+    .card-custom {
+      overflow: hidden;
+      min-height: 450px;
+      box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    }
+
+    .card-custom-img {
+      height: 200px;
+      min-height: 200px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      border-color: inherit;
+    }
+
+    /* First border-left-width setting is a fallback */
+    .card-custom-img::after {
+      position: absolute;
+      content: "";
+      top: 161px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-top-width: 40px;
+      border-right-width: 0;
+      border-bottom-width: 0;
+      border-left-width: 545px;
+      border-left-width: calc(575px - 5vw);
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: inherit;
+    }
+
+    .card-custom-avatar img {
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+      position: absolute;
+      top: 100px;
+      left: 1.25rem;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+
   <body>
-    <script>
-      // Redirect the user to your app with the email link as a parameter
-      const link = window.location.href;
-      window.location.href = `mindnarroreader://document-reader?link=${encodeURIComponent(
-        link
-      )}`;
-    </script>
+    <div class="container">
+      <div class="pt-5 m-auto">
+        <div style="max-width: 500px; margin: 0 auto" class="pb-5">
+          <!-- Copy the content below until next comment -->
+          <div class="card card-custom bg-white border-white border-0">
+            <div class="card-custom-img" style="background-image: url(img/tri.jpg)"></div>
+            <div class="card-custom-avatar">
+              <img class="img-fluid" src="img/me.jpg" alt="Avatar" />
+            </div>
+            <div class="card-body" style="overflow-y: auto">
+              <h2 class="card-title">GLab.</h2>
+              <p class="card-text">
+                I'm a motivated front-end developer adept at creating responsive web and hybrid mobile applications. Proficient in
+                Ionic, Angular, TypeScript and JavaScript. I develope new ideas as a hobby.
+              </p>
+              <hr />
+            </div>
+
+            <div class="card-footer pt-2 mb-2" style="background: inherit; border-color: inherit">
+              <h2 class="card-title pb-4">My latest work</h2>
+
+              <div class="row">
+                <div class="col-auto"><img src="img/fv-cal-logo.png" style="width: 61px" /></div>
+                <div class="col" style="padding-left: 0px !important">
+                  <h6 class="card-title">Compound Interest Calculator</h6>
+                  <a href="https://play.google.com/store/apps/details?id=mind.compound.calculator" target="_blank"
+                    ><img src="img/google.png" style="width: 100px"
+                  /></a>
+                  <a href="https://apps.apple.com/us/app/future-value-calculator/id1642215165" target="_blank"
+                    ><img src="img/apple.png" style="width: 100px"
+                  /></a>
+                  <!-- <a href="https://twitter.com/fvCalculatorApp" target="_blank"
+                    ><img src="img/twitter.png" style="width: 40px"
+                  /></a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Copy until here -->
+        </div>
+      </div>
+    </div>
   </body>
 </html>
