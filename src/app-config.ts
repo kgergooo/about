@@ -32,7 +32,7 @@ export const APP_LIST: App[] = [
     ppURL:
       'https://kgergooo.github.io/about/narro-reader.android-ios-privacy-policy.html',
     feedbackUrl:
-      'https://docs.google.com/forms/d/1m8c76_OAWheXFVPWLIMI5OWmDjvx926wWmswwgJ8-TA/edit',
+      'https://docs.google.com/forms/d/e/1FAIpQLScasoTX9hilAdmaYAHmaeKQA6SGjPDSSKN_ivvN7uKgTTM_Fg/viewform?usp=sf_link',
     description:
       "Easily convert text to speech with our simple but powerful app. It lets you read PDF and DOCX documents, images (with optical character recognition), web pages, and text from your phone's clipboard. You can also translate content and have it read aloud in different languages. A helpful tool for anyone looking to listen to their documents, images, and web content on the go.",
     features: [
