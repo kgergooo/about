@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /smart-notes.android-ios-privacy-policy.html
+Disallow: /compound-interest-calc-android-ios-privacy-policy.html
