@@ -1,13 +1,13 @@
 const fsExtra = require("fs-extra");
 const fs = require("fs");
 
-const GITHUB_PAGE_FOLDER = "../docs";
+const GITHUB_PAGE_FOLDER = "./docs";
 
 const ANGULAR_DIST_FOLDER = "./dist/about";
-const CONFIG_FOLDER = "../configurations";
+const CONFIG_FOLDER = "./configurations";
 
 // Empty www dir
-fsExtra.emptyDirSync("../test");
+fsExtra.emptyDirSync(GITHUB_PAGE_FOLDER);
 
 // Copy angular and configs to Github page folder
 copyFolder(ANGULAR_DIST_FOLDER, GITHUB_PAGE_FOLDER, (err) => {
