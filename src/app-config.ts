@@ -28,7 +28,8 @@ export const APP_LIST: App[] = [
     title: 'Narro Reader',
     iconURL: 'assets/img/narro-logo.png',
     iosAppStoreUrl: 'https://apps.apple.com/us/app/narro-reader/id6657986836',
-    androidGooglePlayUrl: '',
+    androidGooglePlayUrl:
+      'https://play.google.com/store/apps/details?id=mind.narro.reader',
     ppURL:
       'https://kgergooo.github.io/about/narro-reader.android-ios-privacy-policy.html',
     feedbackUrl:
