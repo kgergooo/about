@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'wapp';
-
   onActivate() {
     let scrollToTop = window.setInterval(() => {
       let pos = window.pageYOffset;
