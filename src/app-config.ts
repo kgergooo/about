@@ -1,6 +1,7 @@
 export interface App {
   id: string;
   title: string;
+  intro: string;
   iconURL: string;
   feedbackUrl: string;
   iosAppStoreUrl?: string;
@@ -13,6 +14,8 @@ export const APP_LIST: App[] = [
   {
     id: 'mind.compound.calculator',
     title: 'Financial Calculator',
+    intro:
+      'Compounding interest calculator and currency converter using European Central Bank daily rates.',
     iconURL: 'assets/img/fv-cal-logo.png',
     iosAppStoreUrl:
       'https://apps.apple.com/us/app/future-value-calculator/id1642215165',
@@ -26,6 +29,8 @@ export const APP_LIST: App[] = [
   {
     id: 'mind.narro.reader',
     title: 'Narro Reader',
+    intro:
+      'A text to speech reader that can read PDF, DOCX document formats, images using optical character recognition, and can read clipboards an webpages.',
     iconURL: 'assets/img/narro-logo.png',
     iosAppStoreUrl: 'https://apps.apple.com/us/app/narro-reader/id6657986836',
     androidGooglePlayUrl:

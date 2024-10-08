@@ -26,22 +26,46 @@
       <img [src]="app.iconURL" class="app-icon" />
     </div>
     <div class="col">
-      <h6 class="card-title">
-        {{ app.title }}
-      </h6>
-      <a
-        *ngIf="app?.androidGooglePlayUrl"
-        [href]="app.androidGooglePlayUrl"
-        target="_blank"
-        class="pr-2"
-        ><img src="assets/img/google.png" style="width: 100px"
-      /></a>
-      <a *ngIf="app?.iosAppStoreUrl" [href]="app.iosAppStoreUrl" target="_blank"
-        ><img src="assets/img/apple.png" style="width: 100px"
-      /></a>
-      <span *ngIf="!app?.androidGooglePlayUrl && !app?.iosAppStoreUrl"
-        >Upload in progress</span
-      >
+      <div class="row">
+        <div class="col-12">
+          <h3 class="card-title">
+            {{ app.title }}
+          </h3>
+        </div>
+        <div class="col-12 pb-4">{{ app.intro }}</div>
+        <div class="col-6">
+          <qrcode
+            [qrdata]="app?.androidGooglePlayUrl + ''"
+            [width]="135"
+            [errorCorrectionLevel]="'M'"
+          ></qrcode>
+          <a
+            *ngIf="app?.androidGooglePlayUrl"
+            [href]="app.androidGooglePlayUrl"
+            target="_blank"
+            class="pr-2"
+            ><img src="assets/img/google.png" style="width: 128px"
+          /></a>
+        </div>
+        <div class="col-6">
+          <qrcode
+            [qrdata]="app?.iosAppStoreUrl + ''"
+            [width]="135"
+            [errorCorrectionLevel]="'M'"
+          ></qrcode>
+          <a
+            *ngIf="app?.iosAppStoreUrl"
+            [href]="app.iosAppStoreUrl"
+            target="_blank"
+            ><img src="assets/img/apple.png" style="width: 128px"
+          /></a>
+        </div>
+        <div class="col">
+          <span *ngIf="!app?.androidGooglePlayUrl && !app?.iosAppStoreUrl"
+            >Upload in progress</span
+          >
+        </div>
+      </div>
     </div>
   </div>
 </div>
