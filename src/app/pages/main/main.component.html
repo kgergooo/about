@@ -14,7 +14,7 @@
   style="background: inherit; border-color: inherit"
 >
   <br />
-  <h2 class="card-title pb-2">My recent work:</h2>
+  <h2 class="card-title pb-2">My recent works:</h2>
 
   <!-- APP list -->
   <div
@@ -22,40 +22,42 @@
     *ngFor="let app of appList"
     [routerLink]="['/app-details', app.id]"
   >
-    <div class="col-auto">
-      <img [src]="app.iconURL" class="app-icon" />
-    </div>
     <div class="col">
       <div class="row">
-        <div class="col-12">
+        <div class="col-3">
+          <img [src]="app.iconURL" class="app-icon" />
+        </div>
+        <div class="col-9">
           <h3 class="card-title">
             {{ app.title }}
           </h3>
+          <div class="pb-4">{{ app.intro }}</div>
         </div>
-        <div class="col-12 pb-4">{{ app.intro }}</div>
-        <div class="col-6">
-          <qrcode
+        <div class="col-6 text-right">
+          <!-- <qrcode
             [qrdata]="app?.androidGooglePlayUrl + ''"
             [width]="135"
             [errorCorrectionLevel]="'M'"
-          ></qrcode>
+          ></qrcode> -->
           <a
             *ngIf="app?.androidGooglePlayUrl"
             [href]="app.androidGooglePlayUrl"
+            (click)="openStore($event)"
             target="_blank"
             class="pr-2"
             ><img src="assets/img/google.png" style="width: 128px"
           /></a>
         </div>
-        <div class="col-6">
-          <qrcode
+        <div class="col-6 text-left">
+          <!-- <qrcode
             [qrdata]="app?.iosAppStoreUrl + ''"
             [width]="135"
             [errorCorrectionLevel]="'M'"
-          ></qrcode>
+          ></qrcode> -->
           <a
             *ngIf="app?.iosAppStoreUrl"
             [href]="app.iosAppStoreUrl"
+            (click)="openStore($event)"
             target="_blank"
             ><img src="assets/img/apple.png" style="width: 128px"
           /></a>

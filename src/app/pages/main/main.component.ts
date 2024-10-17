@@ -8,4 +8,8 @@ import { App, APP_LIST } from 'src/app-config';
 })
 export class MainComponent {
   appList: App[] = APP_LIST;
+
+  openStore(event: any): void {
+    event?.stopPropagation();
+  }
 }

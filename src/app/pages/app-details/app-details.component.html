@@ -12,6 +12,26 @@
   {{ application?.description }}
 </section>
 
+<section class="row pt-4 pb-4">
+  <div class="col-6 text-right">
+    <a
+      *ngIf="application?.androidGooglePlayUrl"
+      [href]="application?.androidGooglePlayUrl"
+      target="_blank"
+      class="pr-2"
+      ><img src="assets/img/google.png" style="width: 128px"
+    /></a>
+  </div>
+  <div class="col-6 text-left">
+    <a
+      *ngIf="application?.iosAppStoreUrl"
+      [href]="application?.iosAppStoreUrl"
+      target="_blank"
+      ><img src="assets/img/apple.png" style="width: 128px"
+    /></a>
+  </div>
+</section>
+
 <!-- Features -->
 <section class="pt-4" *ngIf="application?.features">
   <h3 class="pb-2">Features</h3>
